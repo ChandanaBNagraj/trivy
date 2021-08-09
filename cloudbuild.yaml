@@ -2,3 +2,6 @@ steps:
   - id: Docker Pull Version
     name: "gcr.io/cloud-builders/docker"
     args: ["pull", "gcr.io/wipro-gcp-kubernetes-poc/aquasec/trivy:0.18.0"]
+  -id: Trivy version
+    name: "gcr.io/cloud-builders/docker"
+    args: ["version", "gcr.io/wipro-gcp-kubernetes-poc/aquasec/trivy:0.18.0"]
