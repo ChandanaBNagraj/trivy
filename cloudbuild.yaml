@@ -1,0 +1,4 @@
+steps:
+  - id: Docker Pull Version
+    name: "gcr.io/cloud-builders/docker"
+    args: ["pull", "gcr.io/$PROJECT_ID/aquasec/trivy:0.18.0"]
