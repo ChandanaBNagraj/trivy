@@ -1,10 +1,4 @@
 steps:
-  - id: Docker Pull Version
-    name: "gcr.io/cloud-builders/docker"
-    args: ["pull", "gcr.io/wipro-gcp-kubernetes-poc/aquasec/trivy:0.18.0"]
-  - id: Docker run
-    name: "gcr.io/cloud-builders/docker"
-    args: ["run", "gcr.io/wipro-gcp-kubernetes-poc/aquasec/trivy:0.18.0"]
   - id: Trivy Scan
-    name: gcr.io/$PROJECT_ID/aquasec/trivy
+    name: gcr.io/$PROJECT_ID/aquasec/trivy:0.18.0
     args: ["trivy", "image" ,"gcr.io/wipro-gcp-kubernetes-poc/aquasec/trivy:0.18.0"]
