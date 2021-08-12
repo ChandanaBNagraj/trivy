@@ -1,4 +1,4 @@
 steps:
-  - id: Trivy Scan
+  - id: 'Scan with json report'
     name: gcr.io/$PROJECT_ID/aquasec/trivy:0.18.0
-    args: ["trivy","gcr.io/wipro-gcp-kubernetes-poc/aquasec/trivy:0.18.0"]
+    args: ['--format', 'json', '--output', 'scan_report.json', 'gcr.io/$PROJECT_ID/budget:latest']
